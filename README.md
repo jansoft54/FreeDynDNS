@@ -14,7 +14,7 @@ A small Python utility that:
 **Clone this repo**  
 ```bash
    git clone git@github.com:jansoft54/FreeDynDNS.git
-   cd cloudflare-a-record-updater
+   cd FreeDynDNS
    chmod +x setup_cron.sh
    ```
 
@@ -35,7 +35,7 @@ A small Python utility that:
 ```
 ## 🚀 Usage
 ```bash
-./setup_cron.sh /full/path/to/freeDynDns/main.py /full/path/to/freeDynDns/main.log
+./setup_cron.sh /full/path/to/FreeDynDNS/main.py /full/path/to/FreeDynDNS/main.log
 ```
 
 
