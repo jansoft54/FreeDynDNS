@@ -67,8 +67,8 @@ def update_cloudflare_dns():
             "type":    "A",
             "name":    CF_DOMAIN,
             "content": public_ip,
-            "ttl":     1,        # 1 = 'automatic'
-            "proxied": False     # change to True if you want Cloudflare proxy
+            "ttl":     1,        
+            "proxied": False     
         }
         c = requests.post(f"{API_BASE_URL}/zones/{CF_ZONE_ID}/dns_records",
                         headers=headers, json=create_payload)
