@@ -66,7 +66,7 @@ def update_cloudflare_dns():
         create_payload = {
             "type":    "A",
             "name":    CF_DOMAIN,
-            "content": "127.0.0.1",
+            "content": public_ip,
             "ttl":     1,        # 1 = 'automatic'
             "proxied": False     # change to True if you want Cloudflare proxy
         }
@@ -74,7 +74,7 @@ def update_cloudflare_dns():
                         headers=headers, json=create_payload)
         cdata = c.json()
         if cdata.get("success"):
-            print(f"Created A record '{CF_DOMAIN}' → {"127.0.0.1"}")
+            print(f"Created A record '{CF_DOMAIN}' -> {public_ip} ")
         else:
             print("Creation failed:", cdata)
             sys.exit(1)
